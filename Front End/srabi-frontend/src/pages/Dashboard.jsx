@@ -4,48 +4,64 @@ function Dashboard() {
   return (
     <MainLayout>
 
-      <h2 className="mb-4">
+      <h2 className="page-title mb-4">
         Dashboard
       </h2>
 
-      <div className="row">
+      <div className="row g-4">
 
-        <div className="col-md-3 mb-3">
-          <div className="card border-0 shadow">
-            <div className="card-body">
-              <h6>Total Produk</h6>
-              <h2>25</h2>
+        <div className="col-md-3">
+        <div className="card stat-card card-produk shadow">
+          <div className="card-body">
+            <div className="dashboard-title">
+              Total Produk
+            </div>
+            <div className="dashboard-number">
+            25
             </div>
           </div>
         </div>
+        </div>
 
-        <div className="col-md-3 mb-3">
-          <div className="card border-0 shadow">
-            <div className="card-body">
-              <h6>Total Transaksi</h6>
-              <h2>120</h2>
+
+        <div className="col-md-3">
+        <div className="card stat-card card-transaksi shadow">
+          <div className="card-body">
+            <div className="dashboard-title">
+              Total Transaksi
+            </div>
+            <div className="dashboard-number">
+            25
             </div>
           </div>
         </div>
+        </div>
 
-        <div className="col-md-3 mb-3">
-          <div className="card border-0 shadow">
-            <div className="card-body">
-              <h6>Total Penjualan</h6>
-              <h2>Rp 5 Jt</h2>
+        <div className="col-md-3">
+        <div className="card stat-card card-penjualan shadow">
+          <div className="card-body">
+            <div className="dashboard-title">
+              Total Penjualan
+            </div>
+            <div className="dashboard-number">
+            25
             </div>
           </div>
         </div>
+        </div>
 
-        <div className="col-md-3 mb-3">
-          <div className="card border-0 shadow">
-            <div className="card-body">
-              <h6>Stok Menipis</h6>
-              <h2>4</h2>
+        <div className="col-md-3">
+        <div className="card stat-card card-stok shadow">
+          <div className="card-body">
+            <div className="dashboard-title">
+              Stok Menipis
+            </div>
+            <div className="dashboard-number">
+            25
             </div>
           </div>
         </div>
-
+      </div>
       </div>
 
       <div className="row mt-4">

@@ -1,3 +1,8 @@
+.sidebar-img {
+    object-fit: contain;
+    justify-items: left;
+}
+
 .sidebar {
     width: 250px;
     min-height: 100vh;
@@ -11,13 +16,84 @@
 .sidebar-link {
     color: white;
     text-decoration: none;
-    display: block;
+    display: flex;
+    justify-self: left;
+    justify-content: left;
     padding: 12px;
     border-radius: 8px;
-    transition: 0.3s;
 }
 
 .sidebar-link:hover {
+    display: flex;
+    justify-content: left ;
+    box-sizing: border-box;
     background-color: #A67B5B;
     color: white;
+    width: 100%;
+}
+
+body {
+    background-color: #FFF8E7;
+}
+
+.page-tittle{
+    color: #8B5E3C;
+    font-weight: 500;
+}
+
+.stat-card{
+    border: none;
+    display: flex;
+    box-sizing: border-box;
+    width: 200xpx;
+    height: 100px;
+    border-radius: 15px;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-produk {
+    background: linear-gradient(
+        135deg,
+        #6F4E37,
+        #8B5E3C
+    );
+    color: white;
+    justify-content: center;
+    padding: 10px;
+}
+
+.card-transaksi{
+    background: linear-gradient(
+        135deg,
+        #6F4E37,
+        #8B5E3C
+    );
+    color: white;
+    justify-content: center;
+    padding: 10px;
+}
+
+.card-penjualan{
+    background: linear-gradient(
+        135deg,
+        #6F4E37,
+        #8B5E3C
+    );
+    color: white;
+    justify-content: center;
+    padding: 10px;
+}
+
+.card-stok{
+    background: linear-gradient(
+        135deg,
+        #6F4E37,
+        #8B5E3C
+    );
+    color: white;
+    justify-content: center;
+    padding: 10px;
 }

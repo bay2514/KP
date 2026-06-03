@@ -1,3 +1,5 @@
+import logo from "../assets/images/logo-srabi.png";
+
 function Sidebar() {
   return (
     <div
@@ -8,6 +10,15 @@ function Sidebar() {
         backgroundColor: "#6F4E37"
       }}
     >
+      <div className="sidebar-img mb-2">
+        <img
+         src={logo}
+          alt="Logo Srabi"
+          width="80"
+          height="80"
+          className="me-3"
+          />
+      </div>
       <h4>Srabi Solo</h4>
 
       <hr />
