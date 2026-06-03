@@ -1,0 +1,42 @@
+flowchart TD
+
+A([Start])
+B[Masuk Menu Produk]
+
+C{Pilih Menu}
+
+D[Tambah Produk]
+E[Edit Produk]
+F[Hapus Produk]
+G[Lihat Produk]
+
+H[Isi Data Produk]
+I[Update Data]
+J[Konfirmasi Hapus]
+
+K[Simpan ke Database]
+L[Refresh Data Produk]
+
+M([End])
+
+A --> B
+B --> C
+
+C --> D
+C --> E
+C --> F
+C --> G
+
+D --> H
+H --> K
+
+E --> I
+I --> K
+
+F --> J
+J --> K
+
+K --> L
+G --> L
+
+L --> M

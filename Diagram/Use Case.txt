@@ -1,0 +1,43 @@
+flowchart LR
+
+A[Pemilik UMKM]
+
+UC1((Login))
+UC2((Lihat Dashboard))
+UC3((Kelola Produk))
+UC31((Tambah Produk))
+UC32((Edit Produk))
+UC33((Hapus Produk))
+UC34((Lihat Produk))
+
+UC4((Kelola Transaksi))
+UC41((Input Transaksi))
+UC42((Hitung Total))
+UC43((Simpan Transaksi))
+
+UC5((Kelola Laporan))
+UC51((Lihat Laporan))
+UC52((Filter Periode))
+UC53((Cetak Laporan))
+
+UC6((Logout))
+
+A --> UC1
+A --> UC2
+A --> UC3
+A --> UC4
+A --> UC5
+A --> UC6
+
+UC3 -.include.-> UC31
+UC3 -.include.-> UC32
+UC3 -.include.-> UC33
+UC3 -.include.-> UC34
+
+UC4 -.include.-> UC41
+UC4 -.include.-> UC42
+UC4 -.include.-> UC43
+
+UC5 -.include.-> UC51
+UC5 -.include.-> UC52
+UC5 -.include.-> UC53

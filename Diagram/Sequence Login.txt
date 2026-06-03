@@ -1,0 +1,31 @@
+sequenceDiagram
+
+actor Pemilik
+
+participant LoginPage
+participant AuthController
+participant Database
+
+Pemilik->>LoginPage: Input username & password
+
+LoginPage->>AuthController: Kirim data login
+
+AuthController->>Database: Cek username
+
+Database-->>AuthController: Data user
+
+AuthController->>AuthController: Verifikasi password
+
+alt Login Berhasil
+
+AuthController-->>LoginPage: Session dibuat
+
+LoginPage-->>Pemilik: Dashboard
+
+else Login Gagal
+
+AuthController-->>LoginPage: Error Login
+
+LoginPage-->>Pemilik: Tampilkan pesan gagal
+
+end

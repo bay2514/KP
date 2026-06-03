@@ -1,0 +1,43 @@
+classDiagram
+
+class User{
++id_user:int
++username:string
++password:string
+
++login()
++logout()
+}
+
+class Produk{
++id_produk:int
++nama_produk:string
++harga:decimal
++stok:int
+
++tambahProduk()
++editProduk()
++hapusProduk()
+}
+
+class Transaksi{
++id_transaksi:int
++tanggal:date
++total_harga:decimal
+
++buatTransaksi()
++simpanTransaksi()
+}
+
+class DetailTransaksi{
++id_detail:int
++jumlah:int
++harga:decimal
++subtotal:decimal
+}
+
+User "1" --> "*" Transaksi
+
+Transaksi "1" --> "*" DetailTransaksi
+
+Produk "1" --> "*" DetailTransaksi

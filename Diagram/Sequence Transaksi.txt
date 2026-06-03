@@ -1,0 +1,23 @@
+sequenceDiagram
+
+actor Pemilik
+
+participant HalamanTransaksi
+participant TransaksiController
+participant Database
+
+Pemilik->>HalamanTransaksi: Input transaksi
+
+HalamanTransaksi->>TransaksiController: Simpan transaksi
+
+TransaksiController->>Database: Simpan transaksi
+
+Database-->>TransaksiController: Berhasil
+
+TransaksiController->>Database: Update stok
+
+Database-->>TransaksiController: Stok diperbarui
+
+TransaksiController-->>HalamanTransaksi: Transaksi berhasil
+
+HalamanTransaksi-->>Pemilik: Tampilkan struk

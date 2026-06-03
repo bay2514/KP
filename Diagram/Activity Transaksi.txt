@@ -1,0 +1,45 @@
+flowchart TD
+
+A([Start])
+
+B[Masuk Menu Transaksi]
+
+C[Pilih Produk]
+
+D[Input Jumlah]
+
+E[Ambil Harga Produk]
+
+F[Hitung Subtotal]
+
+G{Tambah Produk Lagi?}
+
+H[Hitung Total Transaksi]
+
+I[Simpan Transaksi]
+
+J[Update Stok Produk]
+
+K[Tampilkan Bukti Transaksi]
+
+L([End])
+
+A --> B
+B --> C
+C --> D
+D --> E
+E --> F
+
+F --> G
+
+G -- Ya --> C
+
+G -- Tidak --> H
+
+H --> I
+
+I --> J
+
+J --> K
+
+K --> L

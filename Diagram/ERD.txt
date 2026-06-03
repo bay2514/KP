@@ -1,0 +1,46 @@
+erDiagram
+
+USER {
+
+int id_user PK
+varchar username
+varchar password
+datetime created_at
+
+}
+
+PRODUK {
+
+int id_produk PK
+varchar nama_produk
+decimal harga
+int stok
+datetime created_at
+
+}
+
+TRANSAKSI {
+
+int id_transaksi PK
+date tanggal
+decimal total_harga
+int id_user FK
+
+}
+
+DETAIL_TRANSAKSI {
+
+int id_detail PK
+int id_transaksi FK
+int id_produk FK
+int jumlah
+decimal harga
+decimal subtotal
+
+}
+
+USER ||--o{ TRANSAKSI : membuat
+
+TRANSAKSI ||--|{ DETAIL_TRANSAKSI : memiliki
+
+PRODUK ||--o{ DETAIL_TRANSAKSI : dijual
