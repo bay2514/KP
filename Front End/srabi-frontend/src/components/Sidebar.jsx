@@ -14,8 +14,8 @@ function Sidebar() {
         <img
          src={logo}
           alt="Logo Srabi"
-          width="80"
-          height="80"
+          width="100"
+          height="100"
           className="me-3"
           />
       </div>
