@@ -1,0 +1,78 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="t6okyp_O65CWVy1nVIlH">
+    <mxGraphModel dx="1414" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jRFMIwnQDAGJuHkmG2KG-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;align=center;size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Pemilik" vertex="1">
+          <mxGeometry height="576" width="35" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jRFMIwnQDAGJuHkmG2KG-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="HalamanTransaksi" vertex="1">
+          <mxGeometry height="576" width="150" x="220" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jRFMIwnQDAGJuHkmG2KG-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="TransaksiController" vertex="1">
+          <mxGeometry height="576" width="154" x="420" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jRFMIwnQDAGJuHkmG2KG-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Database" vertex="1">
+          <mxGeometry height="576" width="150" x="624" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jRFMIwnQDAGJuHkmG2KG-5" edge="1" parent="1" source="jRFMIwnQDAGJuHkmG2KG-1" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="jRFMIwnQDAGJuHkmG2KG-2" value="Input transaksi">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="204" y="127" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jRFMIwnQDAGJuHkmG2KG-6" edge="1" parent="1" source="jRFMIwnQDAGJuHkmG2KG-2" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="jRFMIwnQDAGJuHkmG2KG-3" value="Simpan transaksi">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="405" y="179" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jRFMIwnQDAGJuHkmG2KG-7" edge="1" parent="1" source="jRFMIwnQDAGJuHkmG2KG-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="jRFMIwnQDAGJuHkmG2KG-4" value="Simpan transaksi">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="607" y="231" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jRFMIwnQDAGJuHkmG2KG-8" edge="1" parent="1" source="jRFMIwnQDAGJuHkmG2KG-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="jRFMIwnQDAGJuHkmG2KG-3" value="Berhasil">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="283" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jRFMIwnQDAGJuHkmG2KG-9" edge="1" parent="1" source="jRFMIwnQDAGJuHkmG2KG-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="jRFMIwnQDAGJuHkmG2KG-4" value="Update stok">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="607" y="335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jRFMIwnQDAGJuHkmG2KG-10" edge="1" parent="1" source="jRFMIwnQDAGJuHkmG2KG-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="jRFMIwnQDAGJuHkmG2KG-3" value="Stok diperbarui">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="387" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jRFMIwnQDAGJuHkmG2KG-11" edge="1" parent="1" source="jRFMIwnQDAGJuHkmG2KG-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="jRFMIwnQDAGJuHkmG2KG-2" value="Transaksi berhasil">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="408" y="439" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jRFMIwnQDAGJuHkmG2KG-12" edge="1" parent="1" source="jRFMIwnQDAGJuHkmG2KG-2" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="jRFMIwnQDAGJuHkmG2KG-1" value="Tampilkan struk">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="207" y="491" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
