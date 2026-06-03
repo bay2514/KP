@@ -1,0 +1,23 @@
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background: linear-gradient(
+        180deg,
+        #8B5E3C 0%,
+        #6F4E37 100%
+    );
+}
+
+.sidebar-link {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar-link:hover {
+    background-color: #A67B5B;
+    color: white;
+}
