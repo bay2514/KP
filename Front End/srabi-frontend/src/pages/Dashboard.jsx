@@ -8,7 +8,7 @@ function Dashboard() {
         Dashboard
       </h2>
 
-      <div className="row g-4">
+      <div className="row g-5">
 
         <div className="col-md-3">
         <div className="card stat-card card-produk shadow">
@@ -64,83 +64,41 @@ function Dashboard() {
       </div>
       </div>
 
+     
       <div className="row mt-4">
-
         <div className="col-md-8">
-
-          <div className="card shadow">
-
-            <div className="card-header">
-              Grafik Penjualan
-            </div>
-
+          <div className="card shadow h-100">
+            <div className="card-header">Grafik Penjualan</div>
             <div className="card-body">
-
-              <div
-                style={{
-                  height: "300px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center"
-                }}
-              >
+              <div className="chart-placeholder">
                 Chart Penjualan Bulanan
               </div>
-
             </div>
-
           </div>
-
         </div>
 
         <div className="col-md-4">
-
-          <div className="card shadow">
-
-            <div className="card-header">
-              Produk Terlaris
+          <div className="card shadow card-terlaris h-100">
+            <div className="card-header">Produk Terlaris</div>
+            <div className="card-body p-0">
+              <table className="table mb-0">
+                <tbody>
+                  <tr><td>Srabi Original</td></tr>
+                  <tr><td>Srabi Coklat</td></tr>
+                  <tr><td>Srabi Keju</td></tr>
+                  <tr><td>Srabi Pisang</td></tr>
+                </tbody>
+              </table>
             </div>
-
-            <div className="card-body">
-
-              <ul className="list-group">
-
-                <li className="list-group-item">
-                  Srabi Original
-                </li>
-
-                <li className="list-group-item">
-                  Srabi Coklat
-                </li>
-
-                <li className="list-group-item">
-                  Srabi Keju
-                </li>
-
-                <li className="list-group-item">
-                  Srabi Pisang
-                </li>
-
-              </ul>
-
-            </div>
-
           </div>
-
         </div>
-
       </div>
 
+      
       <div className="card shadow mt-4">
-
-        <div className="card-header">
-          Transaksi Terbaru
-        </div>
-
+        <div className="card-header">Transaksi Terbaru</div>
         <div className="card-body">
-
           <table className="table table-bordered">
-
             <thead>
               <tr>
                 <th>No</th>
@@ -150,7 +108,6 @@ function Dashboard() {
                 <th>Total</th>
               </tr>
             </thead>
-
             <tbody>
               <tr>
                 <td>1</td>
@@ -159,7 +116,6 @@ function Dashboard() {
                 <td>2</td>
                 <td>Rp 10.000</td>
               </tr>
-
               <tr>
                 <td>2</td>
                 <td>03/06/2026</td>
@@ -168,13 +124,9 @@ function Dashboard() {
                 <td>Rp 21.000</td>
               </tr>
             </tbody>
-
           </table>
-
         </div>
-
       </div>
-
     </MainLayout>
   );
 }

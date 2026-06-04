@@ -16,7 +16,6 @@ function Sidebar() {
           alt="Logo Srabi"
           width="100"
           height="100"
-          className="me-3"
           />
       </div>
       <h4>Srabi Solo</h4>

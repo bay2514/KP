@@ -1,6 +1,6 @@
 .sidebar-img {
     object-fit: contain;
-    justify-items: left;
+    justify-items: center;
 }
 
 .sidebar {
@@ -8,7 +8,7 @@
     min-height: 100vh;
     background: linear-gradient(
         180deg,
-        #8B5E3C 0%,
+        #E89951 0%,
         #6F4E37 100%
     );
 }
@@ -27,7 +27,7 @@
     display: flex;
     justify-content: left ;
     box-sizing: border-box;
-    background-color: #A67B5B;
+    background-color: #ddad89;
     color: white;
     width: 100%;
 }
@@ -45,7 +45,7 @@ body {
     border: none;
     display: flex;
     box-sizing: border-box;
-    width: 200xpx;
+    width: 200px;
     height: 100px;
     border-radius: 15px;
 }
@@ -57,7 +57,7 @@ body {
 .card-produk {
     background: linear-gradient(
         135deg,
-        #6F4E37,
+        #ECB65F,
         #8B5E3C
     );
     color: white;
@@ -69,7 +69,7 @@ body {
     background: linear-gradient(
         135deg,
         #6F4E37,
-        #8B5E3C
+        #ECB65F
     );
     color: white;
     justify-content: center;
@@ -79,7 +79,7 @@ body {
 .card-penjualan{
     background: linear-gradient(
         135deg,
-        #6F4E37,
+        #E89951,
         #8B5E3C
     );
     color: white;
@@ -91,9 +91,48 @@ body {
     background: linear-gradient(
         135deg,
         #6F4E37,
-        #8B5E3C
+        #E89951
     );
     color: white;
     justify-content: center;
     padding: 10px;
+}
+
+.dashboard-number {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.dashboard-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card-terlaris {
+  background-color: #c8956c !important;
+  color: white !important;
+}
+
+.card-terlaris .card-header {
+  background-color: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+}
+
+.card-terlaris .table {
+  color: white !important;
+  margin-bottom: 0 !important;
+  background-color: transparent !important;
+}
+
+.card-terlaris .table td {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  padding: 0.75rem 1rem;
+  color: #c8956c !important;
+}
+
+.card-terlaris .table tbody tr:hover td {
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
