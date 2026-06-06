@@ -1,14 +1,21 @@
 import MainLayout from "../layouts/MainLayout";
+import SalesChart from "../components/SalesChart";
 
 function Dashboard() {
   return (
     <MainLayout>
 
-      <h2 className="page-title mb-4">
+      <div className="mb-4">
+      <h2 className="page-tittle">
         Dashboard
       </h2>
 
-      <div className="row g-5">
+      <p className="text-muted">
+        Selamat datang di Sistem Informasi Penjualan UMKM Srabi Solo
+      </p>
+    </div>
+
+      <div className="row g-">
 
         <div className="col-md-3">
         <div className="card stat-card card-produk shadow">
@@ -70,28 +77,59 @@ function Dashboard() {
           <div className="card shadow h-100">
             <div className="card-header">Grafik Penjualan</div>
             <div className="card-body">
-              <div className="chart-placeholder">
-                Chart Penjualan Bulanan
-              </div>
+              <SalesChart />
             </div>
           </div>
         </div>
 
         <div className="col-md-4">
-          <div className="card shadow card-terlaris h-100">
-            <div className="card-header">Produk Terlaris</div>
-            <div className="card-body p-0">
-              <table className="table mb-0">
-                <tbody>
-                  <tr><td>Srabi Original</td></tr>
-                  <tr><td>Srabi Coklat</td></tr>
-                  <tr><td>Srabi Keju</td></tr>
-                  <tr><td>Srabi Pisang</td></tr>
-                </tbody>
-              </table>
-            </div>
+        <div className="card shadow h-100 card-terlaris">
+
+          <div className="card-header">
+            Produk Terlaris
           </div>
+
+          <div className="card-body p-0">
+
+            <table className="table table-hover mb-0">
+
+              <thead>
+                <tr>
+                  <th>Produk</th>
+                  <th width="25%">Terjual</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td>Srabi Original</td>
+                  <td>245</td>
+                </tr>
+
+                <tr>
+                  <td>Srabi Coklat</td>
+                  <td>198</td>
+                </tr>
+
+                <tr>
+                  <td>Srabi Keju</td>
+                  <td>175</td>
+                </tr>
+
+                <tr>
+                  <td>Srabi Pisang</td>
+                  <td>142</td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
         </div>
+      </div>
       </div>
 
       

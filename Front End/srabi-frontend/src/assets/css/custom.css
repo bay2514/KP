@@ -1,3 +1,29 @@
+.page-tittle{
+    color: #6F4E37;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.navbar-custom {
+    background-color: #ffffff;
+    height: 70px;
+    border-bottom: 3px solid #C89467;
+    padding: 0 25px;
+}
+
+
+.navbar-custom .navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #6F4E37;
+    letter-spacing: 0.5px;
+}
+
+
+.navbar-custom .navbar-brand:hover {
+    color: #A97142;
+}
+
 .sidebar-img {
     object-fit: contain;
     justify-items: center;
@@ -14,31 +40,28 @@
 }
 
 .sidebar-link {
-    color: white;
+    display: block;
+    color: rgba(255,255,255,.8);
     text-decoration: none;
-    display: flex;
-    justify-self: left;
-    justify-content: left;
-    padding: 12px;
-    border-radius: 8px;
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    transition: .3s;
 }
 
 .sidebar-link:hover {
-    display: flex;
-    justify-content: left ;
-    box-sizing: border-box;
-    background-color: #ddad89;
+    background-color: rgba(255,255,255,.1);
     color: white;
-    width: 100%;
+}
+
+.sidebar-link.active {
+    background-color: #C89467;
+    color: white !important;
+    font-weight: 600;
 }
 
 body {
     background-color: #FFF8E7;
-}
-
-.page-tittle{
-    color: #8B5E3C;
-    font-weight: 500;
 }
 
 .stat-card{
@@ -110,29 +133,56 @@ body {
     font-weight: bold;
 }
 
+
 .card-terlaris {
-  background-color: #c8956c !important;
-  color: white !important;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
+/* Header Card */
 .card-terlaris .card-header {
-  background-color: transparent !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
-  color: white !important;
+    background: linear-gradient(
+        135deg,
+        #C89467,
+        #A97142
+    ) !important;
+    color: white !important;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    padding: 15px;
+    border: none;
 }
 
 .card-terlaris .table {
-  color: white !important;
-  margin-bottom: 0 !important;
-  background-color: transparent !important;
+    margin-bottom: 0;
+}
+
+.card-terlaris .table thead {
+    background-color: #F5E6D3;
+}
+
+.card-terlaris .table thead th {
+    color: #6F4E37;
+    font-weight: 700;
+    border-bottom: 2px solid #C89467;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .card-terlaris .table td {
-  border-color: rgba(255, 255, 255, 0.2) !important;
-  padding: 0.75rem 1rem;
-  color: #c8956c !important;
+    color: #4E342E;
+    vertical-align: middle;
+    padding: 12px;
+    justify-content: left;
 }
 
-.card-terlaris .table tbody tr:hover td {
-  background-color: rgba(255, 255, 255, 0.1) !important;
+.card-terlaris .table tbody tr:hover {
+    background-color: #FFF3E0;
+}
+
+.card-terlaris .table td:last-child {
+    font-weight: 600;
+    color: #A97142;
 }

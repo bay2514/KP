@@ -1,4 +1,5 @@
 import logo from "../assets/images/logo-srabi.png";
+import { NavLink } from "react-router-dom";
 
 function Sidebar() {
   return (
@@ -25,27 +26,47 @@ function Sidebar() {
       <ul className="nav flex-column">
 
         <li className="nav-item">
-          <a href="#" className="sidebar-link">
+          <NavLink
+          to="/"  className={({ isActive }) =>
+    isActive
+      ? "sidebar-link active"
+      : "sidebar-link"
+  }>
             Dashboard
-          </a>
+          </NavLink>
         </li>
 
         <li className="nav-item">
-          <a href="#" className="sidebar-link">
-            Produk
-          </a>
+          <NavLink 
+            to="/produk "  className={({ isActive }) =>
+    isActive
+      ? "sidebar-link active"
+      : "sidebar-link"
+  }>
+              Produk
+          </NavLink>
         </li>
 
         <li className="nav-item">
-          <a href="#" className="sidebar-link">
+          <NavLink 
+          to="/transaksi"  className={({ isActive }) =>
+    isActive
+      ? "sidebar-link active"
+      : "sidebar-link"
+  }>
             Transaksi
-          </a>
+          </NavLink>
         </li>
 
         <li className="nav-item">
-          <a href="#" className="sidebar-link">
+          <NavLink
+          to="/laporan"  className={({ isActive }) =>
+    isActive
+      ? "sidebar-link active"
+      : "sidebar-link"
+  }>
             Laporan
-          </a>
+          </NavLink>
         </li>
 
       </ul>
