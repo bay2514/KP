@@ -38,7 +38,7 @@ function Sidebar() {
 
         <li className="nav-item">
           <NavLink 
-            to="/produk "  className={({ isActive }) =>
+            to="/produk"  className={({ isActive }) =>
     isActive
       ? "sidebar-link active"
       : "sidebar-link"
