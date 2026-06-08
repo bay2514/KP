@@ -1,10 +1,10 @@
 import SalesChart from "../components/SalesChart";
 
 const statCards = [
-  { label: "Total Produk", value: 25, color: "#6F4E37", icon: "🧇" },
-  { label: "Total Transaksi", value: 25, color: "#8B6343", icon: "🧾" },
-  { label: "Total Penjualan", value: "Rp 31.000", color: "#A0522D", icon: "💰" },
-  { label: "Stok Menipis", value: 25, color: "#C8813A", icon: "⚠️" },
+  { label: "Total Produk", value: 25, color: "#6F4E37"},
+  { label: "Total Transaksi", value: 25, color: "#8B6343" },
+  { label: "Total Penjualan", value: "Rp 31.000", color: "#A0522D"},
+  { label: "Stok Menipis", value: 25, color: "#C8813A"},
 ];
 
 const produkTerlaris = [
@@ -49,8 +49,8 @@ function Dashboard() {
       <div className="row g-3 mb-4">
         <div className="col-md-8">
           <div className="card border-0 shadow-sm h-100" style={{ borderRadius: "12px" }}>
-            <div className="card-header border-0 bg-white pt-3 pb-0" style={{ borderRadius: "12px 12px 0 0" }}>
-              <h6 style={{ color: "#6F4E37", fontWeight: 600 }}>Grafik Penjualan</h6>
+            <div className="card-header border-0 pt-3 pb-0" style={{ backgroundColor: "#6F4E37", borderRadius: "12px 12px 0 0" }}>
+              <h6 className="text-white pb-2" style={{ justifySelf: "center", fontWeight: 600 }}>Grafik Penjualan</h6>
             </div>
             <div className="card-body">
               <SalesChart />
@@ -61,7 +61,7 @@ function Dashboard() {
         <div className="col-md-4">
           <div className="card border-0 shadow-sm h-100" style={{ borderRadius: "12px" }}>
             <div className="card-header border-0 pt-3 pb-0" style={{ backgroundColor: "#6F4E37", borderRadius: "12px 12px 0 0" }}>
-              <h6 className="text-white pb-2" style={{ fontWeight: 600 }}>Produk Terlaris</h6>
+              <h6 className="text-white pb-2" style={{ justifySelf: "center", fontWeight: 600 }}>Produk Terlaris</h6>
             </div>
             <div className="card-body p-0">
               <table className="table table-hover mb-0">
@@ -87,8 +87,8 @@ function Dashboard() {
 
       {/* Transaksi Terbaru */}
       <div className="card border-0 shadow-sm" style={{ borderRadius: "12px" }}>
-        <div className="card-header border-0 bg-white pt-3" style={{ borderRadius: "12px 12px 0 0" }}>
-          <h6 style={{ color: "#6F4E37", fontWeight: 600 }}>Transaksi Terbaru</h6>
+        <div className="card-header border-0 pt-3 pb-0" style={{ backgroundColor: "#6F4E37", borderRadius: "12px 12px 0 0" }}>
+          <h6 className= "text-white pb-2"style={{ justifySelf: "center", fontWeight: 600 }}>Transaksi Terbaru</h6>
         </div>
         <div className="card-body p-0">
           <table className="table table-hover mb-0">

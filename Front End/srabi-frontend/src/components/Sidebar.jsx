@@ -19,7 +19,7 @@ function Sidebar() {
           height="100"
           />
       </div>
-      <h4>Srabi Solo</h4>
+      <h4 style={{justifySelf: "center"}}>Srabi Solo</h4>
 
       <hr />
 

@@ -158,7 +158,6 @@ export default function Laporan() {
             <div className="text-center text-muted py-5">Tidak ada data untuk periode ini</div>
           ) : (
             <>
-              {/* Chart Penjualan */}
               <p style={{ color: "#6F4E37", fontWeight: 600, fontSize: "13px", marginBottom: "4px" }}>Total Penjualan (Rp)</p>
               <ResponsiveContainer width="100%" height={220}>
                 {chartType === "line" ? (
