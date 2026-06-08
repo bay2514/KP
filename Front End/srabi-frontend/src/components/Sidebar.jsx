@@ -1,74 +1,43 @@
 import logo from "../assets/images/logo-srabi.png";
 import { NavLink } from "react-router-dom";
 
-function Sidebar() {
+const menuItems = [
+  { to: "/",          label: "Dashboard"  },
+  { to: "/produk",    label: "Produk"     },
+  { to: "/transaksi", label: "Transaksi"  },
+  { to: "/laporan",   label: "Laporan"    },
+];
+
+function Sidebar({ collapsed, onToggle }) {
+  const navLinkClass = ({ isActive }) =>
+    isActive ? "sidebar-link active" : "sidebar-link";
+
+  if (collapsed) return null;
+
   return (
-    <div
-      className="sidebar text-white p-3"
-      style={{
-        width: "250px",
-        minHeight: "100vh",
-        backgroundColor: "#6F4E37"
-      }}
-    >
-      <div className="sidebar-img mb-2">
-        <img
-         src={logo}
-          alt="Logo Srabi"
-          width="100"
-          height="100"
-          />
+    <div className="sidebar text-white">
+
+      {/* Brand */}
+      <div className="sidebar-brand">
+        <img src={logo} alt="Logo Srabi" width="56" height="56" style={{ borderRadius: "50%", flexShrink: 0 }} />
+        <div className="sidebar-brand-text">
+          <span className="sidebar-brand-name">Srabi Solo</span>
+          <span className="sidebar-brand-sub">Sistem Penjualan</span>
+        </div>
       </div>
-      <h4 style={{justifySelf: "center"}}>Srabi Solo</h4>
 
-      <hr />
+      <hr className="sidebar-divider" />
 
-      <ul className="nav flex-column">
-
-        <li className="nav-item">
-          <NavLink
-          to="/"  className={({ isActive }) =>
-    isActive
-      ? "sidebar-link active"
-      : "sidebar-link"
-  }>
-            Dashboard
-          </NavLink>
-        </li>
-
-        <li className="nav-item">
-          <NavLink 
-            to="/produk"  className={({ isActive }) =>
-    isActive
-      ? "sidebar-link active"
-      : "sidebar-link"
-  }>
-              Produk
-          </NavLink>
-        </li>
-
-        <li className="nav-item">
-          <NavLink 
-          to="/transaksi"  className={({ isActive }) =>
-    isActive
-      ? "sidebar-link active"
-      : "sidebar-link"
-  }>
-            Transaksi
-          </NavLink>
-        </li>
-
-        <li className="nav-item">
-          <NavLink
-          to="/laporan"  className={({ isActive }) =>
-    isActive
-      ? "sidebar-link active"
-      : "sidebar-link"
-  }>
-            Laporan
-          </NavLink>
-        </li>
-
+      {/* Menu */}
+      <ul className="nav flex-column gap-1">
+        {menuItems.map(({ to, icon, label }) => (
+          <li className="nav-item" key={to}>
+            <NavLink to={to} className={navLinkClass} end={to === "/"}>
+              <span className="sidebar-icon">{icon}</span>
+              <span className="sidebar-label">{label}</span>
+            </NavLink>
+          </li>
+        ))}
       </ul>
     </div>
   );

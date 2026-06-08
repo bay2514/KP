@@ -35,32 +35,113 @@ body {
     color: #A97142;
 }
 
+.sidebar-hamburger {
+    color: #6F4E37;
+    font-size: 20px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: none;
+    background: transparent;
+    transition: background .2s;
+    cursor: pointer;
+}
+
+.sidebar-hamburger:hover {
+    background: #f8f5f0;
+}
+
 /* ═══════════════════════════════
    SIDEBAR
 ═══════════════════════════════ */
-.sidebar-img {
-    object-fit: contain;
-    justify-items: center;
-}
-
 .sidebar {
-    width: 250px;
+    width: 240px;
     min-height: 100vh;
     background: linear-gradient(180deg, #E89951 0%, #6F4E37 100%);
+    padding: 1rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    transition: width 0.25s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.sidebar-collapsed {
+    width: 68px;
+}
+
+.sidebar-toggle {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background .2s;
+    padding: 0;
+}
+
+.sidebar-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0.5rem 0.25rem;
+    margin-top: 8px;
+    white-space: nowrap;
+}
+
+.sidebar-brand-collapsed {
+    justify-content: center;
+}
+
+.sidebar-brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-brand-name {
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.sidebar-brand-sub {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 11px;
+}
+
+.sidebar-divider {
+    border-color: rgba(255, 255, 255, 0.25);
+    margin: 0.75rem 0;
 }
 
 .sidebar-link {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     color: rgba(255, 255, 255, .8);
     text-decoration: none;
-    padding: 12px 15px;
-    margin-bottom: 5px;
+    padding: 10px 12px;
     border-radius: 10px;
-    transition: .3s;
+    transition: background .2s, color .2s;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .sidebar-link:hover {
-    background-color: rgba(255, 255, 255, .1);
+    background-color: rgba(255, 255, 255, .15);
     color: white;
 }
 
@@ -68,6 +149,35 @@ body {
     background-color: #C89467;
     color: white !important;
     font-weight: 600;
+}
+
+.sidebar-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+    width: 24px;
+    text-align: center;
+}
+
+.sidebar-label {
+    font-size: 14px;
+}
+
+.sidebar-collapsed .sidebar-link {
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.sidebar-collapsed .sidebar-icon {
+    width: auto;
+}
+
+/* ═══════════════════════════════
+   MAIN CONTENT
+═══════════════════════════════ */
+.main-content {
+    flex: 1;
+    min-width: 0;
+    transition: all 0.25s ease;
 }
 
 /* ═══════════════════════════════
@@ -127,7 +237,6 @@ body {
 
 /* ═══════════════════════════════
    SHARED — PAGE HEADER
-   (Produk, Transaksi, Laporan)
 ═══════════════════════════════ */
 .page-header {
     display: flex;
@@ -149,7 +258,6 @@ body {
 
 /* ═══════════════════════════════
    SHARED — CARD PANEL
-   (tabel utama semua halaman)
 ═══════════════════════════════ */
 .panel-card {
     border: none;
@@ -352,9 +460,31 @@ body {
     color: white;
     background: #8B6343;
     outline: none;
+    -moz-appearance: textfield;
 }
 
 .qty-input::-webkit-outer-spin-button,
 .qty-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+}
+
+/* ═══════════════════════════════
+   LOGIN PAGE
+═══════════════════════════════ */
+.login-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffdc8c 0%, #6F4E37 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.login-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
 }
