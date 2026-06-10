@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const produkData = [
   { id_produk: 1, nama_produk: "Srabi Original", harga: 5000, stok: 120 },
@@ -42,6 +44,9 @@ function Transaksi() {
   const [selectedProduk, setSelectedProduk] = useState("");
   const [jumlah, setJumlah] = useState(1);
   const [search, setSearch] = useState("");
+  const [notaData, setNotaData] = useState(null);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [showNota, setShowNota] = useState(false);
 
   const formatRp = (n) => "Rp " + Number(n).toLocaleString("id-ID");
   const totalCart = cart.reduce((sum, item) => sum + item.subtotal, 0);
@@ -80,7 +85,16 @@ function Transaksi() {
   const handleSimpan = () => {
     if (cart.length === 0 || !tanggal) return;
     const newId = Math.max(...transaksiList.map((t) => t.id_transaksi)) + 1;
+    const transaksiBaru = {
+    id_transaksi: newId,
+    tanggal,
+    total_harga: totalCart,
+    detail: [...cart],
+  };
     setTransaksiList([...transaksiList, { id_transaksi: newId, tanggal, total_harga: totalCart, detail: cart }]);
+    setNotaData(transaksiBaru);
+    setShowModal(false);
+    setShowSuccess(true);
     handleTutupModal();
   };
 
@@ -234,6 +248,154 @@ function Transaksi() {
           </div>
         </div>
       )}
+
+      {/* Modal Transaksi Sukses */}
+      {showSuccess && (
+      <div
+        className="modal show d-block"
+        style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+
+            <div className="modal-body text-center p-4">
+
+              <div style={{ fontSize: "60px" }}>
+                ✅
+              </div>
+
+              <h4 className="mt-3">
+                Transaksi Berhasil Disimpan
+              </h4>
+
+              <p className="text-muted">
+                Apakah Anda ingin mencetak nota?
+              </p>
+
+              <div className="d-flex justify-content-center gap-2 mt-4">
+
+                <button
+                  className="btn btn-secondary"
+                  onClick={() => setShowSuccess(false)}
+                >
+                  Tutup
+                </button>
+
+                <button
+                  className="btn btn-success"
+                  onClick={() => {
+                    setShowSuccess(false);
+                    setShowNota(true);
+                  }}
+                >
+                  🖨 Cetak Nota
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    )}
+
+    {showNota && (
+    <div
+    className="modal show d-block"
+    style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+  >
+    <div className="modal-dialog modal-lg modal-dialog-centered">
+      <div className="modal-content">
+
+        <div className="modal-header bg-dark text-white">
+          <h5 className="modal-title">
+            Nota Penjualan
+          </h5>
+
+          <button
+            className="btn-close btn-close-white"
+            onClick={() => setShowNota(false)}
+          />
+        </div>
+
+         <div className="modal-body nota-print">
+
+        <div className="text-center">
+          <h4>UMKM SRABI SOLO</h4>
+          <p>Jl. Imam Bonjol No.141, Pemecutan Klod</p>
+          <p>Kec. Denpasar Bar., Kota Denpasar</p>
+          <p>Bali</p>
+        </div>
+
+        <hr />
+
+        <div className="mb-3">
+          <div>Tanggal : {notaData?.tanggal}</div>
+          <div>No Nota : NP-{notaData?.id_transaksi}</div>
+        </div>
+
+        <table className="table table-borderless">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Produk</th>
+              <th>Qty</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {notaData?.detail.map((item, index) => (
+              <tr key={index}>
+                <td>{index + 1}</td>
+                <td>{item.nama_produk}</td>
+                <td>{item.jumlah}</td>
+                <td>{formatRp(item.subtotal)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <div className="text-end mt-3">
+          <h5>
+            Total Pembayaran :
+            {" "}
+            {formatRp(notaData?.total_harga)}
+          </h5>
+        </div>
+
+        <hr />
+
+        <p className="text-center">
+          Terima kasih atas pembeliannya
+        </p>
+
+      </div>
+
+          <div className="modal-footer">
+
+            <button
+              className="btn btn-secondary"
+              onClick={() => setShowNota(false)}
+            >
+              Tutup
+            </button>
+
+            <button
+              className="btn btn-success"
+              onClick={() => window.print()}
+            >
+              Print
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  )}
     </div>
   );
 }

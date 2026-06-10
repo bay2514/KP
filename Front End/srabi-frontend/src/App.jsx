@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import Produk from "./pages/Produk";
 import Transaksi from "./pages/Transaksi";
 import Laporan from "./pages/Laporan";
+import Nota from "./pages/Nota"
 
 function App() {
   const [user, setUser] = useState(null);
@@ -21,6 +22,7 @@ function App() {
           <Route path="/transaksi" element={<Transaksi />} />
           <Route path="/laporan" element={<Laporan />} />
           <Route path="*" element={<Navigate to="/" />} />
+          <Route path="/nota" element={<Nota />} />
         </Route>
       </Routes>
     </BrowserRouter>
